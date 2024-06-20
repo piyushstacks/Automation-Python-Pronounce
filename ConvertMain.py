@@ -4,30 +4,30 @@ import os
 import pandas as pd
 
 # Define the target word
-target_word = "hello"
+target_word = "how are you"
 
 # Define the target languages (language codes)
 languages = {
     "en": "English",
-    "zh-cn": "Chinese (Mandarin)",
-    "es": "Spanish",
-    "hi": "Hindi",
-    "ar": "Arabic",
-    "bn": "Bengali",
-    "pt": "Portuguese",
-    "ru": "Russian",
-    "ja": "Japanese",
-    "pa": "Punjabi",
+    # "zh-cn": "Chinese (Mandarin)",
+    # "es": "Spanish",
+    # "hi": "Hindi",
+    # "ar": "Arabic",
+    # "bn": "Bengali",
+    # "pt": "Portuguese",
+    # "ru": "Russian",
+    # "ja": "Japanese",
+    # "pa": "Punjabi",
     "de": "German",
-    "jv": "Javanese",
-    "ko": "Korean",
-    "fr": "French",
-    "te": "Telugu",
-    "mr": "Marathi",
-    "tr": "Turkish",
-    "ta": "Tamil",
-    "vi": "Vietnamese",
-    "ur": "Urdu"
+    # "jv": "Javanese",
+    # "ko": "Korean",
+    # "fr": "French",
+    # "te": "Telugu",
+    # "mr": "Marathi",
+    # "tr": "Turkish",
+    # "ta": "Tamil",
+    # "vi": "Vietnamese",
+    # "ur": "Urdu"
 }
 
 # Directory to save audio files
