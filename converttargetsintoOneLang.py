@@ -3,6 +3,7 @@ from translate import Translator
 import requests
 import os
 import pandas as pd
+from datetime import datetime
 
 # Define the target words
 target_words = [
@@ -19,8 +20,8 @@ target_words = [
 ]
 
 # Define the target language (language code)
-target_language_code = "de"
-target_language_name = "German"
+target_language_code = "ru"
+target_language_name = "russian"
 
 # Directory to save audio files
 output_dir = "pronunciations"
@@ -146,9 +147,11 @@ for word in target_words:
     except Exception as e:
         print(f"Error processing '{word}': {e}")
 
-# Save translations to a CSV file
+# Save translations to a CSV file with a unique name
+timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+csv_file_name = f"translations_{target_language_name}_{timestamp}.csv"
 translations_df = pd.DataFrame(translations)
-translations_df.to_csv(os.path.join(output_dir, "translations.csv"), index=False, encoding='utf-8')
+translations_df.to_csv(os.path.join(output_dir, csv_file_name), index=False, encoding='utf-8')
 
 print("All audio files have been generated and saved.")
-print("Translations have been saved to translations.csv.")
+print(f"Translations have been saved to {csv_file_name}.")
